@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="577.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lr2programrs.HelloController">
+   <children>
+      <AnchorPane prefHeight="589.0" prefWidth="771.0">
+          <ComboBox fx:id="dbTypeComboBox" layoutX="59.0" layoutY="30.0" promptText="Виберіть Базу даних MySQL/PostgreSQL" />
+           <TextField fx:id="dbNameField" layoutX="181.0" layoutY="67.0" promptText="Database Name" />
+           <TextField fx:id="hostField" layoutX="14.0" layoutY="67.0" promptText="Host" />
+          <TextField fx:id="userField" layoutX="14.0" layoutY="103.0" promptText="User" />
+          <PasswordField fx:id="passwordField" layoutX="181.0" layoutY="103.0" promptText="Password" />
+          <TextArea fx:id="queryTextArea" layoutX="14.0" layoutY="136.0" prefHeight="55.0" prefWidth="320.0" promptText="Введіть SQL-запит" />
+          <Button fx:id="executeButton" layoutX="118.0" layoutY="201.0" onAction="#executeQuery" text="Виконати запит" />
+          <Label fx:id="timeLabel" layoutX="369.0" layoutY="247.0" text="Time: " />
+          <TableView fx:id="resultTable" layoutX="14.0" layoutY="265.0" prefHeight="302.0" prefWidth="741.0" />
+
+          <Label layoutX="458.0" layoutY="5.0" text="Розподілена транзакція (потрібна 2-га база даних)" />
+          <ComboBox fx:id="dbTypeComboBox2" layoutX="484.0" layoutY="30.0" promptText="Друга БД: MySQL/PostgreSQL" />
+          <TextField fx:id="hostField2" layoutX="439.0" layoutY="67.0" promptText="Host 2" />
+          <TextField fx:id="dbNameField2" layoutX="597.0" layoutY="67.0" promptText="Database Name 2" />
+          <TextField fx:id="userField2" layoutX="439.0" layoutY="103.0" promptText="User 2" />
+          <PasswordField fx:id="passwordField2" layoutX="597.0" layoutY="103.0" promptText="Password 2" />
+          <TextArea fx:id="queryTextArea2" layoutX="437.0" layoutY="136.0" prefHeight="55.0" prefWidth="320.0" promptText="Другий SQL-запит" />
+          <Button layoutX="505.0" layoutY="201.0" onAction="#executeDistributedTransaction" text="Виконати розподілену транзакцію" />
+      </AnchorPane>
+
+   </children>
+</VBox>
